@@ -2,7 +2,7 @@
 using System;
 using System.Text;
 
-namespace RabbitMQAndCloudAMQP.Domain.MessageQueue
+namespace RabbitMQAndCloudAMQP.Domain.Messages
 {
     public class RabbitMq
     {

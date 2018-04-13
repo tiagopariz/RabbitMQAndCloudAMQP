@@ -31,7 +31,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Entities\Person.cs" />
-    <Compile Include="MessageQueue\RabbitMQ.cs" />
+    <Compile Include="Interfaces\Messages\IChannel.cs" />
+    <Compile Include="Interfaces\Messages\IConnection.cs" />
+    <Compile Include="Interfaces\Messages\IMessage.cs" />
+    <Compile Include="Interfaces\Messages\IQueue.cs" />
+    <Compile Include="Messages\Channel.cs" />
+    <Compile Include="Messages\Connection.cs" />
+    <Compile Include="Messages\Queue.cs" />
+    <Compile Include="Messages\Message.cs" />
+    <Compile Include="Messages\RabbitMQ.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -46,5 +54,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

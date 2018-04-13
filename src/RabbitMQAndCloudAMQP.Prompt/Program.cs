@@ -1,4 +1,4 @@
-﻿using RabbitMQAndCloudAMQP.Domain.MessageQueue;
+﻿using RabbitMQAndCloudAMQP.Domain.Messages;
 using System;
 
 namespace RabbitMQAndCloudAMQP.Prompt
