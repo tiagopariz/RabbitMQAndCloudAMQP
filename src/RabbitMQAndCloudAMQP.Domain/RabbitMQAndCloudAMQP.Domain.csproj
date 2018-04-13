@@ -33,14 +33,17 @@
     <Compile Include="Entities\Person.cs" />
     <Compile Include="Interfaces\Messages\IChannel.cs" />
     <Compile Include="Interfaces\Messages\IConnection.cs" />
+    <Compile Include="Interfaces\Messages\IConnectionFactory.cs" />
     <Compile Include="Interfaces\Messages\IMessage.cs" />
     <Compile Include="Interfaces\Messages\IQueue.cs" />
-    <Compile Include="Messages\Channel.cs" />
-    <Compile Include="Messages\Connection.cs" />
-    <Compile Include="Messages\Queue.cs" />
-    <Compile Include="Messages\Message.cs" />
+    <Compile Include="Messages\ChannelBase.cs" />
+    <Compile Include="Messages\ConnectionBase.cs" />
+    <Compile Include="Messages\QueueBase.cs" />
+    <Compile Include="Messages\MessageBase.cs" />
     <Compile Include="Messages\RabbitMQ.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RabbitMQ\Connection.cs" />
+    <Compile Include="RabbitMQ\Message.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Diagnostics.Tracing.EventSource, Version=1.1.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">

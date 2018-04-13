@@ -2,12 +2,12 @@
 
 namespace RabbitMQAndCloudAMQP.Domain.Messages
 {
-    public class Queue : IQueue
+    public abstract class QueueBase : IQueue
     {
-        public Queue(string name,
-                     bool durable,
-                     bool exclusive,
-                     bool autoDelete)
+        protected QueueBase(string name,
+                            bool durable,
+                            bool exclusive,
+                            bool autoDelete)
         {
             Name = name;
             Durable = durable;

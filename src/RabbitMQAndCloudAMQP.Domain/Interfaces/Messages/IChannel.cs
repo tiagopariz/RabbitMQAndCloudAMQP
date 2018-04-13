@@ -1,6 +1,6 @@
 ﻿namespace RabbitMQAndCloudAMQP.Domain.Interfaces.Messages
 {
-    public interface IChannel
+    public interface IModel
     {
         IQueue Queue { get; }
         string Exchange { get; }

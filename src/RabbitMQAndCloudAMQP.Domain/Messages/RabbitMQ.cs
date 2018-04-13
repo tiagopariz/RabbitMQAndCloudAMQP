@@ -1,4 +1,5 @@
 ﻿using RabbitMQ.Client;
+using RabbitMQAndCloudAMQP.Domain.RabbitMQ;
 using System;
 using System.Text;
 
@@ -17,7 +18,9 @@ namespace RabbitMQAndCloudAMQP.Domain.Messages
 
         public RabbitMq()
         {
-            ConnFactory.Uri = new Uri(Url.Replace("amqp://", "amqps://"));
+            var conn = new Connection(
+                url: "amqp://fjmbtlqc:rYbxR3SbqAmMuw8tf1NE_nTJp_ELrIW-@hornet.rmq.cloudamqp.com/fjmbtlqc"
+            );
         }
 
         public object Publish(string message, string queueName = "person")

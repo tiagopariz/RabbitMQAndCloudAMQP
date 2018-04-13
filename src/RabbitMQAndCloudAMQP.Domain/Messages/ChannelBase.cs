@@ -2,9 +2,11 @@
 
 namespace RabbitMQAndCloudAMQP.Domain.Messages
 {
-    public class Channel : IChannel
+    public abstract class ChannelBase : IChannel
     {
-        public Channel(IQueue queue, string exchange, string routingKey)
+        protected ChannelBase(IQueue queue,
+                              string exchange,
+                              string routingKey)
         {
             Queue = queue;
             Exchange = exchange;
@@ -15,9 +17,6 @@ namespace RabbitMQAndCloudAMQP.Domain.Messages
         public string Exchange { get; }
         public string RoutingKey { get; }
 
-        public void Publish(IMessage message)
-        {
-            throw new System.NotImplementedException();
-        }
+        public virtual void Publish(IMessage message) { }
     }
 }

@@ -2,9 +2,9 @@
 
 namespace RabbitMQAndCloudAMQP.Domain.Messages
 {
-    public class Message : IMessage
+    public abstract class MessageBase : IMessage
     {
-        public Message(string body)
+        protected MessageBase(string body)
         {
             Body = body;
         }
